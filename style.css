@@ -12,7 +12,9 @@
 body {
   font-family: 'Poppins', sans-serif;
   line-height: 1.6;
-  color: #333;
+  background-color: #fff1cf;
+  color: #1d0d04;
+  scroll-behavior: smooth;
 }
 
 /* Header */
@@ -21,13 +23,14 @@ header {
   top: 0;
   left: 0;
   width: 100%;
-  background: rgba(255, 255, 255, 0.95); /* white with 95% opacity */
+  background: #1d0d04; 
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 2rem;
-  transition: transform 0.3s ease;
+  padding: 2rem 2rem;
+  transition:  0.3s ease;
   z-index: 999;
+  box-shadow: 0 6px 15px rgb(0, 0, 0);
 }
 
 header nav a {
@@ -35,8 +38,9 @@ header nav a {
   text-decoration: none;
   color: #222;
   font-weight: 600;
+  transition: color 0.3s ease;
 }
-header nav a.active { color: #d97706; }
+header nav a.active { color: #ebdbdc; }
 
 
 
@@ -44,10 +48,12 @@ header .logo {
   font-family: "Playfair Display", serif;
   font-size: 1.8rem;
   font-weight: 700;
-  color: #1a1a1a;
+  color: #fff1cf;
   letter-spacing: 1px;
   text-transform: uppercase;
 }
+
+
 
 header nav ul {
   list-style: none;
@@ -58,7 +64,7 @@ header nav ul {
 
 header nav a {
   text-decoration: none;
-  color: #1f2937;
+  color: #fff;
   font-weight: 600;
   position: relative;
   padding: 0.3rem 0;
@@ -72,14 +78,14 @@ header nav a::after {
   left: 0;
   width: 0%;
   height: 3px;
-  background: linear-gradient(90deg, #f59e0b, #d97706);
+  background: #fdffd4;
   border-radius: 2px;
   transition: width 0.3s ease;
 }
 
 header nav a:hover,
 header nav a.active {
-  color: #d97706;
+  color: #8a8888;
 }
 
 header nav a:hover::after,
@@ -102,12 +108,41 @@ header nav a.active::after {
 /* Hero */
 .hero {
   height: 100vh;
-  background: url('shawn-cZMGbIkSe0o-unsplash.jpg') center/cover no-repeat fixed;
+  background: url('02.jpg') center/cover no-repeat ;
   display: flex; justify-content: center; align-items: center;
-  color: #fff; text-align: center;
+  color: #222; text-align: center ; font-weight: 550;
+  
   
 }
-.hero-text h2 { font-size: 3rem; margin-bottom: 0.5rem; }
+
+
+.hero-text h2 { color: #1d0d04; font-size: 3rem; margin-bottom: 0.5rem; break-after: always;}
+
+.hero .page {
+  margin-top: 2rem;
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  border-radius: 18px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  background: #fdffd4;
+  color: #1d0d04;
+  box-shadow: 0 6px 20px #371005;
+  border-width: 3px;
+  border-style: solid;
+  border-color: #371005;
+  
+}
+
+.hero .page:hover{
+    transform: translateY(-3px) scale(1.03);
+    color: #fff1cf;
+    background-color: #1d0d04;
+    border-color: #fff1cf;
+    box-shadow: 0 6px 20px #371005;
+}
+
 
 /* Sections */
 .intro, .itinerary {
@@ -115,6 +150,20 @@ header nav a.active::after {
   max-width: 1100px;
   margin: auto;
 }
+
+.intro .slogan{
+  font-family: "Playfair Display", serif;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #1d0d04;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  text-align: center;
+  margin-top: 4rem;
+}
+
+.intro li{margin-top: 1rem;}
+
 
 /* Itinerary grid */
 .day-container {
@@ -134,12 +183,23 @@ header nav a.active::after {
 
 /* Footer */
 footer {
-  background: #1f2937;
-  color: #d1d5db;
+  background: #1d0d04;
+  color: #fdffd4;
   text-align: center;
   padding: 3rem 1rem;
   font-size: 0.95rem;
   letter-spacing: 0.5px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  box-shadow: 6px -10px 25px rgb(0, 0, 0);
+}
+
+footer .acc{
+  color: #fff;
+  
+}
+
+footer .acc:hover{
+  color: gray;
 }
 
 
@@ -158,3 +218,4 @@ footer {
 @media (max-width: 768px) {
   .hero { background-attachment: scroll; }
 }
+
